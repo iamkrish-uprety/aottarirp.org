@@ -11805,7 +11805,7 @@ span {
 .mobile-menus .mean-nav {
   max-width: 530px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 799px) {
   .mobile-menus .mean-nav {
     max-width: initial;
   }

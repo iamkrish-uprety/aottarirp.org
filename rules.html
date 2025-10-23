@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+       <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="AottariRP">
+        <meta name="author" content="Krish Uprety">
+        <meta name="description" content="Aottari RP - Server U Love">
+        <!-- ======== Page title ============ -->
+        <title>Aottari RP | Server U Love</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/logo/Aottarifav.png">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+            
+        
+        <!--<< Responsive.css >>-->
+         <style>
+        :root {
+            --primary-color: #ff7828;
+            --dark-bg: #0a0a0f;
+            --card-bg: #12121f;
+            --text-light: #e0e0e0;
+            --text-muted: #8a8a9c;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .rules-header {
+            background: linear-gradient(rgba(10, 10, 15, 0.9), rgba(10, 10, 15, 0.9)), 
+                        url('assets/img/home-1/hero/bg-action-2.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rules-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .rules-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-muted);
+        }
+        
+        .rules-container {
+            padding: 60px 0;
+        }
+        
+        .table-of-contents {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 20px;
+        }
+        
+        .table-of-contents h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        .toc-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc-list li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .toc-list li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .toc-list a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .toc-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .rules-section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .rules-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 120, 40, 0.3);
+        }
+        
+        .rule-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .rule-item:last-child {
+            border-bottom: none;
+        }
+        
+        .rule-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+        }
+        
+        .rule-title:before {
+            content: "▸";
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .rule-description {
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        
+        .rule-penalty {
+            background-color: rgba(255, 120, 40, 0.1);
+            border-left: 3px solid var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            font-size: 0.9rem;
+        }
+        
+        .rule-penalty strong {
+            color: var(--primary-color);
+        }
+        
+        .important-note {
+            background-color: rgba(255, 50, 50, 0.1);
+            border-left: 4px solid #ff3232;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .important-note h4 {
+            color: #ff3232;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background-color: #080811;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .footer-logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .social-icon {
+            margin-bottom: 20px;
+        }
+        
+        .social-icon a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 8px;
+            color: var(--text-light);
+            transition: all 0.3s;
+        }
+        
+        .social-icon a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(255, 120, 40, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .rules-header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .table-of-contents {
+                position: static;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+    </head>
+<body>
+    <!-- Header -->
+    <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                </div>
+                <p class="text-center">Loading...</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <!-- GT Back To Top Start -->
+        <button id="gt-back-top" class="gt-back-to-top show">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
+
+        <!-- GT MouseCursor Start -->
+        <div class="mouseCursor cursor-outer"></div>
+        <div class="mouseCursor cursor-inner"></div>
+        
+     
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area  style-offcanvas-2">
+            <div class="header-offcanvas-border">
+                <div class="offcanvas__info">
+                <div class="offcanvas__close">
+                    <button>
+                    <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-image">
+                    <img src="assets/img/offcanvas-image.png" alt="img">
+                </div>
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="mobile-menus fix"></div>
+                        <div class="social-icon">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+        <header id="header-sticky" class="header-1">
+            <div class="container">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main">
+                        <!-- logo -->
+                        <div class="logo">
+                            <a href="/" class="header-logo">
+                                <img src="assets/img/logo/aottariweblogo.svg" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="header-right pb-0 d-flex justify-content-end align-items-center">
+                            <div class="mean__menu-wrapper">
+                                <div class="main-menu">
+                                    <nav id="mobile-menus">
+                                        <ul>
+                                            <li class="has-dropdown active">
+                                                <a href="index.html" class="border-none">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://apply.aottarirp.org/">Apply For Whitelist</a>
+                                            </li>
+                                            <li>
+                                                <a href="rules.html">Rules</a>
+                                            </li>
+                                            <li>
+                                                <a href="faq.html">FAQ</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="bar-icon">
+                                <a target="_blank" href="https://store.aottarirp.org" >
+                                    <img src="assets/img/logo/store-svgrepo-com.svg" alt="img">
+                                </a>
+                                 <!-- <div class="header__hamburger my-auto">
+                                    <div class="sidebar__toggle">
+                                        <img src="assets/img/logo/bar-icon.svg" alt="img">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="swiper line-slider">
+                <div class="swiper-wrapper gt-slide-transtion">
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                     <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                     <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                </div>
+        </div>
+
+
+        <!-- GT Breadcrunb Section Start -->
+        <div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.png');">
+            <div class="gt-left-shape">
+                <img src="assets/img/shape-1.png" alt="img">
+            </div>
+            <div class="gt-right-shape">
+                <img src="assets/img/shape-2.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="gt-page-heading">
+                    <div class="gt-breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Server Rues</h1>
+                    </div>
+                    <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <i class="fa-solid fa-house"></i>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                home :
+                            </a>
+                        </li>
+                        <li class="color">
+                            rules
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Rules Content -->
+    <section class="rules-container">
+        <div class="container">
+            <div class="row">
+                <!-- Table of Contents -->
+                <div class="col-lg-4">
+                    <div class="table-of-contents">
+                        <h3>Table of Contents</h3>
+                        <ul class="toc-list">
+                            <li><a href="#community-conduct">Community Conduct</a></li>
+                            <li><a href="#exploitation-and-cheating">Exploitation and Cheating</a></li>
+                            <li><a href="#advertising-and-external-platforms">Advertising and External Platforms</a></li>
+                            <li><a href="#discord-conduct">Discord Conduct</a></li>
+                            <li><a href="#forum-conduct">Forum Conduct</a></li>
+                            <li><a href="#staff-relations">Staff Relations</a></li>
+                            <li><a href="#general-rules">General Rules</a></li>
+                            <li><a href="#roleplay-rules">Roleplay Rules</a></li>
+                            <li><a href="#meta-gaming">Metagaming</a></li>
+                            <li><a href="#new-life-rule">New Life Rule</a></li>
+                            <li><a href="#character-development">Character Development</a></li>
+                            <li><a href="#emergency-buildings">Emergency Buildings</a></li>
+                            <li><a href="#combat-and-hostages">Combat and Hostages</a></li>
+                            <li><a href="#police-rules">Police Rules</a></li>
+                            <li><a href="#medical-and-fire">Medical and Fire Rules</a></li>
+                            <li><a href="#lost-mc">Lost MC Rules</a></li>
+                            <li><a href="#group-and-gang">Group and Gang Rules</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Rules Sections -->
+                <div class="col-lg-8">
+                    <!-- Community Conduct -->
+                    <div class="rules-section" id="community-conduct">
+                        <h2>Community Conduct</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Bullying</div>
+                            <div class="rule-description">
+                               Any form of targeted harassment, intimidation, or belittling behavior directed at community members is strictly forbidden. We are committed to maintaining a respectful environment where all players feel welcome.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Discrimination</div>
+                            <div class="rule-description">
+                                Aottari Roleplay has zero tolerance for discriminatory language or behavior. This includes but is not limited to racism, sexism, homophobia, transphobia, religious discrimination, or any form of hate speech.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">OOC Abuse</div>
+                            <div class="rule-description">
+                                Using out-of-character communications to verbally abuse or harass other players is prohibited. Maintain civility even when discussing disagreements.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Harassment</div>
+                            <div class="rule-description">
+                                Threatening or harassing any individual or group within our community is strictly prohibited. In severe cases, we may collaborate with relevant authorities if legal boundaries are crossed.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Infrastructure Attacks</div>
+                            <div class="rule-description">
+                                Any attempts to disrupt, damage, or gain unauthorized access to our servers, services, or infrastructure are strictly prohibited. This includes DDoS attacks, hacking, and any form of digital vandalism.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Discretionary Removal</div>
+                            <div class="rule-description">
+                                We reserve the right to remove any content or user that we deem inappropriate or harmful to the community, at our sole discretion.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Common Sense</div>
+                            <div class="rule-description">
+                                All members are expected to use common sense and good judgment when interacting with others. This includes being respectful, avoiding excessive negativity, and contributing positively to the community.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or Temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Encouraging Violations</div>
+                            <div class="rule-description">
+                                Encouraging or inciting others to violate the rules is strictly prohibited. This includes promoting harmful behavior, sharing exploits, or any actions that undermine the integrity of the community.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning or Temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Age Falsification</div>
+                            <div class="rule-description">
+                                Providing false information about one's age is strictly prohibited. This includes lying about age to bypass restrictions or to manipulate others.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Disruptive Behavior/Trolling</div>
+                            <div class="rule-description">
+                                Engaging in disruptive behavior or trolling is strictly prohibited. This includes spamming, baiting, or any actions intended to provoke or annoy others.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or Temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Real Money Trading</div>
+                            <div class="rule-description">
+                                Engaging in real money trading or the exchange of in-game items for real-world currency is strictly prohibited. This includes any form of account selling or trading.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Sensitive Content</div>
+                            <div class="rule-description">
+                                Sharing or promoting sensitive content, including but not limited to hate speech, graphic violence, or explicit material, is strictly prohibited. In severe cases, we may collaborate with relevant authorities if legal boundaries are crossed.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">AFK Policy</div>
+                            <div class="rule-description">
+                                Players are expected to be active and engaged during gameplay. Prolonged inactivity (AFK) in critical areas may result in penalties.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">In-Game Disputes</div>
+                            <div class="rule-description">
+                                Do not disrupt ongoing roleplay to address rule violations or disputes. Instead of threatening to report someone in-game, continue the roleplay and address concerns through proper channels afterward.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or Temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Ban Evasion</div>
+                            <div class="rule-description">
+                                Attempting to circumvent a ban by creating new accounts or using alternative methods to access our servers will result in an extension of the original ban and permanent banning of any alternative accounts.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Exploitation & Cheating -->
+                    <div class="rules-section" id="exploitation-and-cheating">
+                        <h2>Exploitation & Cheating</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Game Modifications</div>
+                            <div class="rule-description">
+                                The use of any third-party software, scripts, or modifications that alter game functionality while connected to our servers is prohibited. This includes visual enhancement tools that could provide unfair advantages.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Exploiting Bugs</div>
+                            <div class="rule-description">
+                               Intentionally using or attempting to use game bugs or glitches for personal advantage is forbidden. This includes item duplication, processing through walls, or bypassing intended game mechanics.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Combat Logging</div>
+                            <div class="rule-description">
+                               Disconnecting from the server to avoid roleplay consequences is strictly prohibited. This includes but is not limited to logging out during combat, police pursuit, while detained, after death, or to preserve items/equipment.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Combat Storing</div>
+                            <div class="rule-description">
+                                Using vehicle storage mechanics to gain unfair advantages during roleplay scenarios is prohibited. This includes but is not limited to storing vehicles to avoid pursuit or impounding/scrapping to prevent seizure.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Improper Teleportation</div>
+                            <div class="rule-description">
+                                Using the respawn function to travel across the map quickly or abusing garage systems to transport goods is prohibited. Respawn should only be used when legitimately killed or when stuck due to a game bug.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advertising -->
+                    <div class="rules-section" id="advertising-and-external-platforms">
+                        <h2>Advertising & External Platforms</h2>
+
+                        <div class="rule-item">
+                            <div class="rule-title">External Promotion</div>
+                            <div class="rule-description">
+                                Promoting external platforms, servers, or communities within the server is prohibited without explicit permission from the staff team.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> permanent ban
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Discord conduct -->
+                    <div class="rules-section" id="discord-conduct">
+                        <h2>Discord Conduct</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Voice Chat Etiquette</div>
+                            <div class="rule-description">
+                                Treat all players with respect both in-character and out-of-character. Harassment, discrimination, hate speech, or personal attacks will not be tolerated.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Voice Modulation</div>
+                            <div class="rule-description">
+                                The use of voice changers or soundboards in public or official channels (including emergency services rooms) is prohibited as it disrupts clear communication.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Audio Restrictions</div>
+                            <div class="rule-description">
+                                Music and sound effects should only be played in designated music channels or private group channels. Playing audio in public or service channels disrupts communication.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Appropriate Imagery</div>
+                            <div class="rule-description">
+                                Profile pictures, avatars, and other visual representations must be appropriate and non-offensive. Graphic, explicit, or otherwise inappropriate imagery is not permitted.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Identity Misrepresentation</div>
+                            <div class="rule-description">
+                                Impersonating other community members by adopting their usernames, avatars, or other identifying characteristics is prohibited.  All decisions and instructions from server staff are final. Arguing with staff members in-game or on Discord will result in additional penalties.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forum Conduct -->
+                    <div class="rules-section" id="forum-conduct">
+                        <h2>Forum Conduct</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Forum Etiquette</div>
+                            <div class="rule-description">
+                                Exercise maturity and respect when participating in forum discussions. Inappropriate behavior, including spamming, trolling, bullying, or using offensive language, is not permitted.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Forum Profile Standards</div>
+                            <div class="rule-description">
+                                Maintain appropriate forum profiles with suitable usernames and avatars that align with community standards.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Constructive Discussion</div>
+                            <div class="rule-description">
+                                Creating threads or posts with the primary intention of causing controversy, arguments, or community division is prohibited.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Report Non-Interference</div>
+                            <div class="rule-description">
+                               Do not comment on player reports that do not involve you directly or in which you did not participate in the reported situation.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Appeal Process Respect</div>
+                            <div class="rule-description">
+                                Refrain from commenting on ban appeals unless you were directly involved in the situation leading to the ban.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Ban Discussion Guidelines</div>
+                            <div class="rule-description">
+                                Discussions regarding bans should be limited to appropriate channels such as ban appeals. Using status updates or general forums to discuss ban-related matters is not permitted.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- staff relations -->
+                    <div class="rules-section" id="staff-relations">
+                        <h2>Staff Relations</h2>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Staff Decisions Are Final</div>
+                            <div class="rule-description">
+                                Decisions made by the administration team are considered final after proper review. While constructive feedback is welcome, continuing to argue after a decision has been explained is unproductive.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Staff Respect</div>
+                            <div class="rule-description">
+                                Maintain respectful communication with staff members. Abusive language, aggressive behavior, or harassment directed at staff will not be tolerated.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Admin Observation</div>
+                            <div class="rule-description">
+                                Staff members in-game will be identifiable by special uniforms when performing official duties. Please continue normal roleplay unless directly addressed by staff..
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Staff Communication Boundaries</div>
+                            <div class="rule-description">
+                               Please use official channels for staff communication rather than personal messages or social media, unless explicitly invited to do so by the staff member.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Staff Accountability</div>
+                            <div class="rule-description">
+                                Staff members found abusing their privileges or position will face appropriate disciplinary action, potentially including removal from the team and community bans.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Staff Assistance Limits</div>
+                            <div class="rule-description">
+                                Staff members are prohibited from using administrative powers to provide players with items, money, or unfair advantages unless addressing a legitimate technical issue.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Staff Integrity</div>
+                            <div class="rule-description">
+                                Staff members accepting bribes or payments in exchange for special treatment will be immediately removed from the team and banned. Players offering such bribes will also face permanent bans.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Confidentiality</div>
+                            <div class="rule-description">
+                                Staff members must maintain confidentiality regarding internal discussions, upcoming features, or administrative decisions until officially announced to the communi
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Staff Compliance</div>
+                            <div class="rule-description">
+                                All community rules apply equally to staff members, with exceptions only permitted in specific situations requiring administrative intervention.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper line-slider">
+                        <div class="swiper-wrapper gt-slide-transtion">
+                            <div class="swiper-slide gt-brand-slide-element">
+                                <span class="line1"></span>
+                            </div>
+                            <div class="swiper-slide gt-brand-slide-element">
+                                <span class="line1"></span>
+                            </div>
+                            <div class="swiper-slide gt-brand-slide-element">
+                                <span class="line1"></span>
+                            </div>
+                            <div class="swiper-slide gt-brand-slide-element">
+                                <span class="line1"></span>
+                            </div>
+                            <div class="swiper-slide gt-brand-slide-element">
+                                <span class="line1"></span>
+                            </div>
+                            <div class="swiper-slide gt-brand-slide-element">
+                                <span class="line1"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- General Rules -->
+                    <div class="rules-section" id="general-rules">
+                        <h2>General Rules</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Vehicle Combat (RVDM)</div>
+                            <div class="rule-description">
+                                Using vehicles as weapons without legitimate roleplay justification is prohibited. This includes deliberately running over players, causing vehicle explosions, or ramming other vehicles outside of structured roleplay scenarios.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Random Combat (RDM)</div>
+                            <div class="rule-description">
+                                Engaging in combat without meaningful roleplay interaction is prohibited. Simply ordering someone to comply without context or using countdown ultimatums does not constitute sufficient roleplay justification for violence.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Provocative Behavior</div>
+                            <div class="rule-description">
+                                Deliberately creating situations to provoke hostile responses for the purpose of initiating combat is prohibited. This includes intentionally committing crimes in front of law enforcement or antagonizing groups known for aggressive responses.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Chat Misuse</div>
+                            <div class="rule-description">
+                                Flooding communication channels with excessive or irrelevant messages disrupts roleplay and community experience. Keep communications appropriate and relevant.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Unrealistic Advantage</div>
+                            <div class="rule-description">
+                                Creating scenarios where others have no reasonable chance to respond appropriately is prohibited. This includes roleplaying superhuman abilities, using game mechanics to trap players, or claiming unrealistic injuries to avoid consequences.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Character Separation</div>
+                            <div class="rule-description">
+                                Maintain clear boundaries between in-character and out-of-character interactions. Do not bring real-life disputes into roleplay or vice versa. Your character's actions and relationships are separate from your personal identity.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Realistic Driving</div>
+                            <div class="rule-description">
+                                Vehicle operation should reflect realistic limitations. Extreme stunts, surviving significant falls, or driving at excessive speeds in urban areas without acknowledging consequences breaks immersion. Accidents should be appropriately roleplayed.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Leadership Responsibility</div>
+                            <div class="rule-description">
+                                Players in leadership positions (business owners, faction leaders, senior emergency service personnel) are expected to exemplify excellent roleplay and adherence to community standards, serving as role models for other players.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Roleplay Rules -->
+                    <div class="rules-section" id="roleplay-rules">
+                        <h2>Roleplay Rules</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Voice Communication</div>
+                            <div class="rule-description">
+                                A functioning microphone is required to participate in our roleplay server. Text-only communication significantly limits roleplaying capabilities and interaction quality.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Language Requirements</div>
+                            <div class="rule-description">
+                                English is our community's primary language for communication. While roleplaying characters with different linguistic backgrounds is permitted, please be prepared to communicate in English when necessary for clarity.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Immersive Roleplay</div>
+                            <div class="rule-description">
+                                Remain in character during all interactions unless specifically directed otherwise by an administrator. Breaking character disrupts immersion for everyone involved.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning or temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Self-Preservation</div>
+                            <div class="rule-description">
+                                Your character should prioritize their own survival. When faced with significant threats or overwhelming opposition, compliance is generally more realistic than suicidal resistance.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning or temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">OOC Purpose</div>
+                            <div class="rule-description">
+                                Out-of-character chat should be used exclusively for necessary game-related assistance. Extended OOC conversations disrupt immersion and should be conducted through alternative platforms.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">OOC Information Sharing</div>
+                            <div class="rule-description">
+                                Using OOC chat to broadcast in-game events or alert others to ongoing activities is prohibited as it circumvents normal roleplay communication channels.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning 
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Communication Limitations</div>
+                            <div class="rule-description">
+                                If your character's communication devices are confiscated during roleplay, you must restrict communications accordingly. External voice platforms should not be used to circumvent in-game limitations.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> warning or temporary ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Character Resources</div>
+                            <div class="rule-description">
+                                Transferring money, items, or other resources between your own characters is strictly prohibited regardless of the method used.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> permanent ban
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Property Ownership</div>
+                            <div class="rule-description">
+                                Extended inactivity (exceeding one month) may result in the forfeiture of owned properties to ensure resources remain available to active community members.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+
+                        <div class="rule-item">
+                            <div class="rule-title">Consent for Intimate RP</div>
+                            <div class="rule-description">
+                                Any roleplay involving sexual themes must have explicit out-of-character consent from all involved parties before initiation. Non-consensual sexual roleplay is strictly prohibited, and staff must be informed of consensual arrangements beforehand.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> permanent ban
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Metagaming -->
+                    <div class="rules-section" id="metagaming">
+                        <h2>Metagaming</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">External Information</div>
+                            <div class="rule-description">
+                                Using information obtained outside of roleplay to influence in-game decisions is strictly prohibited. This includes details from streams, forums, Discord, or other external sources that your character would not legitimately know.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Permanent ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Player Identification</div>
+                            <div class="rule-description">
+                                Identifying players by their session IDs rather than through roleplay recognition is prohibited. For uniformed personnel, you may reference visible rank insignia or collar numbers unless they are undercover or disguised.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">External Communication</div>
+                            <div class="rule-description">
+                                If using external communication platforms during roleplay, you must vocalize relevant information in-game when it would affect ongoing scenarios. This ensures all participants have access to the same information.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Social Media Integrity</div>
+                            <div class="rule-description">
+                                In-game social platforms like Birdy are considered part of the roleplay environment. Sharing information that breaches New Life rules or represents out-of-character knowledge is prohibited.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Multi-Character Separation</div>
+                            <div class="rule-description">
+                                Information learned through one character must not influence the actions of your other characters. Each character should operate with only the knowledge they have personally acquired through roleplay.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Life Rule -->
+                    <div class="rules-section" id="new-life-rule">
+                        <h2>New Life Rule (NLR)</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">NLR Application</div>
+                            <div class="rule-description">
+                                A new life begins when your character respawns after death in a roleplay scenario, with exceptions noted in NLR Exceptions. This reset means your character loses all memory of events leading to their death.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">NLR Exceptions</div>
+                            <div class="rule-description">
+                                The New Life Rule does not apply if a staff member has explicitly confirmed you were victim of clear RDM or RVDM. This confirmation must come through official channels such as the game server, forums, or communication platforms.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">NLR Obligations</div>
+                            <div class="rule-description">
+                                After respawning: Your character retains no memory of their death or preceding events; any conflicts with their killer(s) are considered resolved; relationships ended through death cannot be resumed; and you must avoid the location of your death for at least 15 minutes.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Incapacitation State</div>
+                            <div class="rule-description">
+                                While incapacitated but before respawning, you are considered injured but not dead. Roleplay your injuries appropriately without referencing the respawn timer or other game mechanics.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Post-Revival Protocol</div>
+                            <div class="rule-description">
+                                After receiving medical treatment, continue to roleplay your injuries appropriately. Do not immediately flee without roleplay justification. While you retain memories from before being downed, you must avoid combat situations for at least 15 minutes due to your injuries.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Character Development -->
+                    <div class="rules-section" id="character-development">
+                        <h2>Character Development</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Character Naming</div>
+                            <div class="rule-description">
+                                Use realistic, original names for your character. Names referencing celebrities, fictional characters, historical figures, notorious criminals, or containing inappropriate wordplay are not permitted.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Character Consistency</div>
+                            <div class="rule-description">
+                                Maintain consistency in your character's personality, background, and appearance. Major character changes should be supported by appropriate roleplay development.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Permanent Character Death</div>
+                            <div class="rule-description">
+                                Characters may be permanently removed from the server as part of roleplay scenarios only with mutual agreement between all involved parties and staff approval.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Destructive Characters</div>
+                            <div class="rule-description">
+                                Characters created primarily to engage in widespread violence or disruptive behavior will face stricter consequences, and players may be required to use alternative characters.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Organization Naming</div>
+                            <div class="rule-description">
+                                Names for businesses, gangs, and other organizations must be realistic and appropriate. Names that are legally problematic, inappropriate, or unrealistic will be removed without notice.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Criminal Consequences</div>
+                            <div class="rule-description">
+                                Persistent criminal activity will attract increased law enforcement attention, resulting in escalating penalties. In extreme cases, characters may face permanent imprisonment with administrative approval.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Progressive Development</div>
+                            <div class="rule-description">
+                                Character progression should follow a realistic trajectory. New characters should not immediately possess extensive resources, influence, or criminal empires, but should gradually develop these through consistent roleplay.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Emergency Buildings -->
+                    <div class="rules-section" id="emergency-buildings">
+                        <h2>Emergency Buildings</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Facility Respect</div>
+                            <div class="rule-description">
+                                Lingering around emergency service facilities (police stations, hospitals, fire stations) without legitimate roleplay purpose is prohibited. These areas should be treated as professional environments.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Combat & Hostages -->
+                    <div class="rules-section" id="combat-hostages">
+                        <h2>Combat & Hostages</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Hostage Scenarios</div>
+                            <div class="rule-description">
+                                Hostage situations must involve high-quality, immersive roleplay that creates an engaging experience for all participants. Focus on creating memorable interactions rather than mechanical outcomes.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Legitimate Hostages</div>
+                            <div class="rule-description">
+                                Using friends, gang members, or willing participants as staged hostages is prohibited. Hostage situations should involve genuine roleplay with unaffiliated individuals.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Realistic Executions</div>
+                            <div class="rule-description">
+                                Character executions must be conducted with appropriate realism and roleplaying quality. The method should match available tools (e.g., needing a bladed weapon for throat-cutting).
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Threat Communication</div>
+                            <div class="rule-description">
+                                Using communication systems to issue blanket threats against emergency services (e.g., "any police within X distance will be shot") is prohibited as it circumvents proper roleplay interaction.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Emergency Response</div>
+                            <div class="rule-description">
+                                Police activating lights and sirens does not automatically constitute roleplay initiation. Attacking officers without proper roleplay interaction solely because they are responding to a scene is considered RDM.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Tactical Equipment</div>
+                            <div class="rule-description">
+                                The deployment of tactical equipment like spike strips must be accompanied by proper roleplay interaction. Using such equipment without roleplay engagement is considered equivalent to RDM.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Character Conflicts</div>
+                            <div class="rule-description">
+                                You may only have one character involved in any opposing faction at a time. If multiple characters could be engaged in conflicting storylines, you must choose only one to participate.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Police Rules -->
+                    <div class="rules-section" id="police-rules">
+                        <h2>Police Rules</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Police Equipment</div>
+                            <div class="rule-description">
+                                Law enforcement officers must not willingly give away or sell their issued equipment except in compelling roleplay circumstances with strong justification.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Impartial Enforcement</div>
+                            <div class="rule-description">
+                                Officers must enforce laws impartially regardless of personal relationships. Showing favoritism to friends or associates by reducing charges or overlooking violations without roleplay justification is prohibited.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Station Defense Exception</div>
+                            <div class="rule-description">
+                                The 15-minute NLR restriction does not apply to police officers during police station attacks. Stations are considered permanently staffed with law enforcement personnel and monitored by security systems, making attacks particularly high-risk.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Police Integrity</div>
+                            <div class="rule-description">
+                                Officers may not roleplay corrupt activities or behavior. This rule is enforced on a case-by-case basis by the administrative team and cannot be used as grounds for player reports.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Medical & Fire Rules -->
+                    <div class="rules-section" id="medical-fire-rules">
+                        <h2>Medical & Fire Rules</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Medical Equipment Control</div>
+                            <div class="rule-description">
+                                Medical and fire service personnel must not sell or willingly surrender their issued equipment to unauthorized individuals.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Balanced Response Coverage</div>
+                            <div class="rule-description">
+                                Medical and fire personnel should maintain balanced coverage across the region rather than exclusively following specific groups or factions. Patrol assigned areas or the entire county to ensure equal service availability.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Emergency Services Protection</div>
+                            <div class="rule-description">
+                                While medical and fire personnel may be targeted with appropriate roleplay justification if they refuse to cooperate with threats, they cannot be taken hostage for extended periods.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Impartial Care</div>
+                            <div class="rule-description">
+                                Medical and fire personnel must not abuse their positions to provide special treatment or advantages to friends or associates outside of normal service protocols.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Unsafe Response Areas</div>
+                            <div class="rule-description">
+                                Medical personnel must not attempt to provide care in areas where active combat is occurring. Patient rescue must wait until the scene is secure to maintain realism and safety protocols.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Emergency Vehicle Security</div>
+                            <div class="rule-description">
+                                Taking or using emergency service vehicles without proper authorization from the respective department is prohibited.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lost MC Rules -->
+                    <div class="rules-section" id="lost-mc-rules">
+                        <h2>Lost MC Rules</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Alliance Limitations</div>
+                            <div class="rule-description">
+                                The Lost MC may form temporary tactical alliances with other groups but must maintain their distinct identity and autonomy. Long-term non-aggression agreements are permitted.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Clubhouse Defense Exception</div>
+                            <div class="rule-description">
+                                If the Lost MC clubhouse is attacked, Lost members are exempt from the standard 15-minute NLR timer and may immediately return to defend their territory.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Conflicting Allegiances</div>
+                            <div class="rule-description">
+                                Players may not simultaneously maintain characters in both the Lost MC and 'The Firm' due to inherent conflicts of interest between these organizations.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Group & Gang Rules -->
+                    <div class="rules-section" id="group-gang-rules">
+                        <h2>Group & Gang Rules</h2>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Permanent Expulsion</div>
+                            <div class="rule-description">
+                                If your character is killed as part of being removed from a group or organization, that character is permanently barred from rejoining that organization in the future.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Group Independence</div>
+                            <div class="rule-description">
+                                Different groups and factions must operate independently during confrontations with other groups. Coordinating across group lines for activities such as combat assistance, information sharing, or simultaneous attacks is prohibited.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Limited Cooperation</div>
+                            <div class="rule-description">
+                                Temporary alliances of up to 6 characters from different groups may form for specific roleplay scenarios. These coalitions are treated as separate entities and must still adhere to the coordination restrictions outlined in the zerg rule.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Conflict Resolution</div>
+                            <div class="rule-description">
+                                Extended conflicts between groups will be subject to a two-week resolution period. If group leaders cannot reach an agreement within this timeframe, staff will intervene with impartial mediation based on community guidelines.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Wartime Recruitment Freeze</div>
+                            <div class="rule-description">
+                                Groups engaged in active conflict may not recruit new members or expand their rosters until the conflict is resolved.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Group Transition Period</div>
+                            <div class="rule-description">
+                                After leaving any whitelisted organization (voluntarily or otherwise), players must observe a 30-day cooling-off period before joining another whitelisted group to prevent metagaming and faction-hopping.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Engagement Cooldown</div>
+                            <div class="rule-description">
+                                When connecting to the server, you must wait 15 minutes before involving yourself in any ongoing hostile situations related to your group or faction to prevent tactical logging and reinforcement abuse.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Penalty:</strong> Warning/Temporary ban
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <div class="rule-title">Character Exclusivity</div>
+                            <div class="rule-description">
+                                A player may only have one character in any whitelisted group at any given time to prevent conflicts of interest and information sharing between competing organizations.
+                            </div>
+                            <div class="rule-penalty">
+                                <strong>Type:</strong> Information
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Important Note -->
+                    <div class="important-note">
+                        <h4>Important Notice</h4>
+                        <p>These rules are not exhaustive. Staff members have discretion to address situations not explicitly covered here. The primary goal is to maintain a quality roleplay environment for all players. When in doubt, prioritize realistic roleplay and common sense.</p>
+                        <p>All bans can be appealed through our Discord server. Repeat offenders will face increasingly severe penalties.</p>
+
+                        <h4 style="text-align: right;">🕔 Last updated: 23/10/2025</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="swiper line-slider">
+                <div class="swiper-wrapper gt-slide-transtion">
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                     <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                     <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                    <div class="swiper-slide gt-brand-slide-element">
+                        <span class="line1"></span>
+                    </div>
+                </div>
+            </div>
+    <!-- Footer Section Start -->
+        <footer class="footer-section fix bg-cover" style="background-image: url('assets/img/home-1/footer-image.jpg');">
+            <div class="container">
+                <div class="footer-top-wrapper">
+                    <div class="social-icon d-flex align-items-center">
+                        <a href="https://discord.gg/2GuramQrZk"><i class="fa-brands fa-discord"></i></i></a>
+                        <a href="https://www.youtube.com/@itsaottarirp"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://github.com/AottariRP"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/aottariroleplay/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/img/logo/aottariweblogo.svg" alt="img">
+                    </a>
+                    <div class="location-info">
+                        <div class="icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p>
+                            Los Santos, Fivem, <br>Rockstar Games
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="footer-bottom-text">© 2025 <b>AottariRP </b>. All Rights Reserved.</p>
+            
+        </footer>
+
+     <!--<< All JS Plugins >>-->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <!--<< Viewport Js >>-->
+        <script src="assets/js/viewport.jquery.js"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <!--<< Counterup Js >>-->
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <!--<< Parallaxie Min Js >>-->
+        <script src="assets/js/parallaxie.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--<< Gsap Min  Js >>-->
+        <script src="assets/js/gsap.min.js"></script>
+        <!--<< Gsap Scroll Trigger To Plugin Js >>-->
+        <script src="assets/js/gsap-scroll-to-plugin.js"></script>
+        <!--<< Gsap Scroll Trigger Smoother Js >>-->
+        <script src="assets/js/gsap-scroll-smoother.js"></script>
+        <!--<< Gsap Scroll Trigger Js >>-->
+        <script src="assets/js/gsap-scroll-trigger.js"></script>
+        <!--<< Splittext Min Js >>-->
+        <script src="assets/js/SplitText.min.js"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--<< Main.js >>-->
+        <script src="assets/js/main.js"></script>
+</body>
+</html>
